@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ThemeToggle from '../components/ThemeToggle';
+import Head from 'next/head';
 
 export default function Home() {
   const [pingTime, setPingTime] = useState(200);
@@ -52,6 +53,14 @@ export default function Home() {
   return (
     <div className="min-h-screen transition-colors duration-200" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <ThemeToggle />
+      <Head>
+        <title>Ping Simulator – Visualize Network Latency</title>
+        <meta name="description" content="Simulate and visualize network latency for system design interviews and web performance studies. Try different ping times and see how they feel!" />
+        <meta property="og:title" content="Ping Simulator – Visualize Network Latency" />
+        <meta property="og:description" content="Simulate and visualize network latency for system design interviews and web performance studies." />
+        <meta property="og:type" content="website" />
+        <link rel="icon" type="image/png" href="/icon.png" />
+      </Head>
       
       <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-16">
         <div className="rounded-lg shadow-md p-6 sm:p-12 transition-colors duration-200" style={{ backgroundColor: 'var(--bg-secondary)' }}>
