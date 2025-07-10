@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-primary: rgb(249 250 251);
+    --bg-secondary: rgb(255 255 255);
+    --text-primary: rgb(17 24 39);
+    --text-secondary: rgb(107 114 128);
+    --border-color: rgb(229 231 235);
+    --success-text: #16a34a; /* dark green for light mode */
+  }
+  
+  :root.dark {
+    color-scheme: dark;
+    --bg-primary: rgb(17 24 39);
+    --bg-secondary: rgb(31 41 55);
+    --text-primary: rgb(255 255 255);
+    --text-secondary: rgb(156 163 175);
+    --border-color: rgb(75 85 99);
+    --success-text: #6ee7b7; /* light green for dark mode */
+  }
+}
